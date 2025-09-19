@@ -35,7 +35,12 @@ ggplot(plastic_waste,aes(x=plastic_waste_per_cap))+
 
 ![](lab-02_files/figure-gfm/plastic-waste-continent-1.png)<!-- -->
 
-### Exercise 2
+On peut voir en comparant les continent en terme de déchets plastiques
+qu’il y a moins d’habitants en Océanie et en Amérique du Sud que sur les
+autres continents. De plus, sur chaque continent, on peut remarquer
+qu’il y a une certaine quantitié de déchets par habitant qui revient
+plus fréquemment.  
+\### Exercise 2
 
 ``` r
 ggplot(plastic_waste,aes(x=plastic_waste_per_cap,fill=continent))+
@@ -44,31 +49,48 @@ ggplot(plastic_waste,aes(x=plastic_waste_per_cap,fill=continent))+
 
 ![](lab-02_files/figure-gfm/plastic-waste-density-1.png)<!-- -->
 
-Réponse à la question…
+Le réglage de la couleur et de la transparence ne sont pas au même
+endroit parce que la couleur est dépendante d’une variable, alors que la
+transparence est indépendante, elle ne dépend pas d’une variable.
 
 ### Exercise 3
 
 Boxplot:
 
 ``` r
-# insert code here
+ggplot(plastic_waste,aes(x=continent, y=plastic_waste_per_cap))+
+  geom_boxplot()
 ```
+
+![](lab-02_files/figure-gfm/plastic-waste-boxplot-1.png)<!-- -->
 
 Violin plot:
 
 ``` r
-# insert code here
+ggplot(plastic_waste,aes(x=continent, y=plastic_waste_per_cap))+
+  geom_violin()
 ```
 
-Réponse à la question…
+![](lab-02_files/figure-gfm/plastic-waste-violin-1.png)<!-- -->
+
+Les violin plots permettebt de voir la répartition des données à
+l’intérieur de la boîte et, ainsi, pouvoir mieux se représenter la
+distribution des données.
 
 ### Exercise 4
 
 ``` r
-# insert code here
+ggplot(plastic_waste,aes(x=plastic_waste_per_cap, y=mismanaged_plastic_waste_per_cap,color=continent))+
+  geom_point()
 ```
 
-Réponse à la question…
+![](lab-02_files/figure-gfm/plastic-waste-mismanaged-1.png)<!-- -->
+
+On peut remarquer sur le graphique en général que plus la quantité de
+déchet augmente, plus la quantité de déchet non gérés augmente. Il
+s’agit d’une relation proportionnelle.
+
+Selon les différents continents, on peut apercevoir que
 
 ### Exercise 5
 
