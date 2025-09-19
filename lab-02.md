@@ -86,23 +86,38 @@ ggplot(plastic_waste,aes(x=plastic_waste_per_cap, y=mismanaged_plastic_waste_per
 
 ![](lab-02_files/figure-gfm/plastic-waste-mismanaged-1.png)<!-- -->
 
-On peut remarquer sur le graphique en général que plus la quantité de
+On peut remarquer sur le graphe en général que plus la quantité de
 déchet augmente, plus la quantité de déchet non gérés augmente. Il
 s’agit d’une relation proportionnelle.
 
-Selon les différents continents, on peut apercevoir que
+Selon les différents continents, on peut apercevoir que les continents
+les plus développés, tels que l’Europe et l’Amérique du Nord, ont une
+meilleure gestion des déchets pour un même niveau de quantité de déchets
+que les continents moins développés, tels que l’Asie et l’Afrique.
 
 ### Exercise 5
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x=plastic_waste_per_cap, y=total_pop))+ 
+  geom_point()
 ```
+
+    ## Warning: Removed 10 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](lab-02_files/figure-gfm/plastic-waste-population-total-1.png)<!-- -->
 
 ``` r
-# insert code here
+ggplot(plastic_waste, aes(x=plastic_waste_per_cap, y=coastal_pop))+ 
+  geom_point()
 ```
 
-Réponse à la question…
+![](lab-02_files/figure-gfm/plastic-waste-population-coastal-1.png)<!-- -->
+
+Il semble y avoir une relation plus forte entre la quantité de déchets
+plastiques par habitant et le nombre total d’habitants. En effet, dans
+le premier graphe, il y a moins de données abérrantes, les données sont
+beaucoup plus raprochées les unes des autres.
 
 ## Conclusion
 
