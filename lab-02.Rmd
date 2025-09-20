@@ -109,7 +109,7 @@ plastic_waste_coastal <- plastic_waste %>%
 ggplot(plastic_waste_coastal, aes(x=coastal_pop_prop, y=plastic_waste_per_cap, color=continent))+
   geom_point()+
   labs(title= "Quantité de déchets plastiques vs Proportion de la population côtière", subtitle= "Selon le continent", x="Proportion de la population côtière (Coastal / total population)", y="Nombre de déchets plastiques par habitant", color= "Continent")+
-  geom_smooth(method="loess",se= TRUE, color="black")
+  geom_smooth(method="loess",color="black")
 ```
 
 Sur ce graphe, on peut voir que, malgré que la courbe de tendance montre la tendance générale des points, il y a beaucoup de données qui sont loin de cette courbe. Donc, il est difficile de prévoir une tendance générale entre la quantitié de déchets plastiques et la proportion de la population côtière. 
